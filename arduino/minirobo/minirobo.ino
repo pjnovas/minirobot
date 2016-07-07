@@ -7,7 +7,7 @@
 #include <PCF8814.h>
 
 // Serial ----------------------------------------
-  const int SERIAL_BAULRATE = 9600;
+  const long SERIAL_BAULRATE = 115200; // By Default baulrate for Bluetooth (HC05) is 9600, so if you didn't change it set that one
 
 // LCD ----------------------------------------
 

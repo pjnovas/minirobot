@@ -156,13 +156,14 @@ export function move(dir, vel) {
     switch(dir){
       case 'forward': dir = 60; break;
       case 'backward': dir = 70; break;
+      case 'stop': dir = 10; break;
     }
 
     if (vel < 0 || vel > 255){
-      vel = 100; // set a mediu, velocity in case the range is wrong
+      vel = 50; // set a medium, velocity in case the range is wrong
     }
 
-    console.log(`${dir}:${vel}&`);
+    //console.log(`${dir}:${vel}&`);
     send(dispatch, `${dir}:${vel}&`);
   };
 }

@@ -29,20 +29,16 @@ const styles = StyleSheet.create({
 });
 
 const Devices = props => {
-  const { display, move, disconnect } = props;
+  const { move, disconnect } = props;
 
   return (
     <View style={styles.layout}>
-      <TouchableOpacity onPress={() => display(0)} style={styles.button}>
-        <Text>Display 0</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => display(1)} style={styles.button}>
-        <Text>Display 1</Text>
-      </TouchableOpacity>
-      <TouchableOpacity onPress={() => move('forward', 150)} style={styles.button}>
+      <TouchableOpacity style={styles.button}
+        onPressIn={() => move('forward', 50)} onPressOut={() => move('stop')} >
         <Text>Move Forward</Text>
       </TouchableOpacity>
-      <TouchableOpacity onPress={() => move('backward', 150)} style={styles.button}>
+      <TouchableOpacity style={styles.button}
+        onPressIn={() => move('backward', 50)} onPressOut={() => move('stop')} >
         <Text>Move Backward</Text>
       </TouchableOpacity>
       <TouchableOpacity onPress={disconnect} style={styles.button}>

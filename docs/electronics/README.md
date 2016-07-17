@@ -25,3 +25,6 @@ Using one PCB:
 Using Two PCB:
 * 2 x	Generic male header - 2 pins (for Out and In 5v)
 * 3 x	Generic male header - 4 pins (for DC Motors and signals from Arduino)
+
+## Circuit schema
+![schema](all_schem.png)
